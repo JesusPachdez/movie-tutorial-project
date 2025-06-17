@@ -1,20 +1,21 @@
 import "./App.css";
+import MovieCard from "./components/MovieCard";
 
-function App() {
+export default function App() {
   return (
     <>
-      <Text text="Hello World" />
-      <Text text="what is your name?" />
+      <MovieCard
+        movie={{
+          title: "The Dark Knight",
+          release_date: "2008",
+        }}
+      />
+      <MovieCard
+        movie={{
+          title: "spider man no way home",
+          release_date: "2021",
+        }}
+      />
     </>
   );
 }
-
-function Text({ text }) {
-  return (
-    <div>
-      <p>{text}</p>
-    </div>
-  );
-}
-
-export default App;
