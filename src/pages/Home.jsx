@@ -1,5 +1,6 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from "react";
+import "../css/Home.css";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,7 +43,7 @@ export default function Home() {
           Search
         </button>
       </form>
-      <div className="movie-grid">
+      <div className="movies-grid">
         {movies.map(
           (movie) =>
             movie.title.toLowerCase().startsWith(searchQuery) && (
